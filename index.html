@@ -327,14 +327,6 @@
     </div>
   </section>
 
-  <!-- Messages -->
-  <section id="messages" class="py-16 sm:py-24 bg-white">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6">
-      <h2 class="heading text-3xl font-extrabold text-[var(--navy)]">Messages</h2>
-      <div id="messageContainer" class="mt-4"></div>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer class="py-10 border-t border-slate-200 bg-[var(--cream)]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 text-sm text-slate-600 flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -386,40 +378,6 @@
       learnMoreBtn.addEventListener('click', () => {
         promoModal.classList.add('hidden');
       });
-    }
-
-    // Display a message and include a button to reply
-    async function READMSG(id) {
-      const container = document.getElementById('messageContainer');
-      container.textContent = 'Loading...';
-      try {
-        const resp = await fetch(`/api/messages/${id}`);
-        if (!resp.ok) throw new Error('Not found');
-        const msg = await resp.json();
-        container.innerHTML = `\
-<p>${msg.text}</p>\
-<button id="replyBtn" class="mt-2 px-4 py-2 rounded-xl bg-[var(--amber)] text-white hover:opacity-90 transition">Reply</button>`;
-        document.getElementById('replyBtn').addEventListener('click', () => REPLYMSG(id));
-      } catch (err) {
-        container.textContent = 'Unable to load message.';
-      }
-    }
-
-    // REPLYMSG command invoked by the reply button
-    async function REPLYMSG(id) {
-      const reply = prompt('Enter your reply:');
-      if (reply === null) return;
-      try {
-        const resp = await fetch(`/api/messages/${id}/reply`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ reply }),
-        });
-        if (!resp.ok) throw new Error('Request failed');
-        alert('Reply sent!');
-      } catch (err) {
-        alert('Unable to send reply.');
-      }
     }
   </script>
 </body>
