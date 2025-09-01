@@ -332,12 +332,33 @@
   </footer>
 
   <script>
-    // Basic in-page form handler (no backend)
+    // Submit form to backend
     function handleSubmit(e){
       e.preventDefault();
+      const form = e.target;
       const status = document.getElementById('formStatus');
-      status.textContent = 'Thanks! We received your inquiry and will follow up shortly.';
-      e.target.reset();
+      const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        role: form.role.value,
+        phone: form.phone.value,
+        community: form.community.value,
+        message: form.message.value,
+        mc: form.mc.checked
+      };
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      }).then(resp => {
+        if(!resp.ok) throw new Error('Request failed');
+        return resp.json();
+      }).then(data => {
+        status.textContent = 'Thanks! We received your inquiry and will follow up shortly.';
+        form.reset();
+      }).catch(() => {
+        status.textContent = 'Sorry, there was a problem. Please try again later.';
+      });
       return false;
     }
     document.getElementById('year').textContent = new Date().getFullYear();
