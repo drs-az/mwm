@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Music with Melissa — The Resident Sing‑Along Club</title>
+  <meta name="description" content="A warm, seated-friendly sing‑along club for senior living communities. No performance—just joy, memory, and connection.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Nunito:wght@600;800&family=Allura&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --navy:#2C3E50;
+      --amber:#E9A038;
+      --sage:#8FB38C;
+      --cream:#F7F3EC;
+    }
+    .brand-gradient{
+      background: radial-gradient(60% 60% at 40% 40%, rgba(233,160,56,0.25) 0%, rgba(247,243,236,0.85) 45%, rgba(44,62,80,0.06) 100%);
+    }
+    .shadow-soft{ box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .animate-float{ animation: float 6s ease-in-out infinite; }
+    @keyframes float{
+      0%,100%{ transform: translateY(0) }
+      50%{ transform: translateY(-6px) }
+    }
+    .script{ font-family: "Allura", cursive; }
+    .heading{ font-family: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
+    .body{ font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans"; }
+  </style>
+</head>
+<body class="body text-slate-800 bg-[var(--cream)]">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-[var(--cream)]/85 backdrop-blur border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between py-3">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-3 group" aria-label="Music with Melissa Home">
+          <div class="w-12 h-12 rounded-full bg-white border-2 border-[var(--navy)] grid place-content-center shadow-soft">
+            <!-- Inline note icon -->
+            <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true" class="text-[var(--amber)]">
+              <circle cx="28" cy="46" r="10" fill="currentColor"></circle>
+              <rect x="34" y="12" width="6" height="28" fill="currentColor"></rect>
+              <path d="M40 12 C 56 18, 28 30, 58 36" fill="none" stroke="currentColor" stroke-width="4" />
+            </svg>
+          </div>
+          <div class="leading-tight">
+            <div class="heading text-lg font-extrabold text-[var(--navy)] leading-5">Music with</div>
+            <div class="script text-3xl -mt-1 text-[var(--amber)] leading-6">Melissa</div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="#program" class="hover:text-[var(--navy)]/80">Program</a>
+          <a href="#benefits" class="hover:text-[var(--navy)]/80">Benefits</a>
+          <a href="#pricing" class="hover:text-[var(--navy)]/80">Pricing</a>
+          <a href="#faq" class="hover:text-[var(--navy)]/80">FAQ</a>
+          <a href="#contact" class="px-4 py-2 rounded-xl bg-[var(--amber)] text-white hover:opacity-90 transition">Book a Call</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="brand-gradient">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="heading text-4xl sm:text-5xl font-extrabold text-[var(--navy)]">
+            The Resident <span class="text-[var(--amber)]">Sing‑Along Club</span>
+          </h1>
+          <p class="mt-5 text-lg text-slate-700">
+            A warm, seated‑friendly hour of familiar songs, gentle warmups, and lots of smiles.
+            No performance—just joy, memory, and connection. Designed for independent living with optional add‑ons for assisted living and memory care.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#contact" class="px-6 py-3 rounded-xl bg-[var(--amber)] text-white font-semibold hover:opacity-90 transition">Check availability</a>
+            <a href="#program" class="px-6 py-3 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 transition">See how it works</a>
+          </div>
+          <div class="mt-6 text-sm text-slate-600 flex items-center gap-3">
+            <span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--sage)]"></span> Seated‑friendly</span>
+            <span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--sage)]"></span> Drop‑in welcome</span>
+            <span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--sage)]"></span> Large‑print lyrics</span>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="absolute -inset-4 rounded-3xl bg-white/60 blur-xl"></div>
+          <div class="relative rounded-3xl border border-slate-200 bg-white p-6 shadow-soft animate-float">
+            <div class="aspect-[16/10] rounded-2xl bg-gradient-to-br from-[var(--cream)] to-white grid place-content-center">
+              <!-- Decorative large logo badge -->
+              <div class="w-40 h-40 rounded-full bg-white border-4 border-[var(--navy)] grid place-content-center mx-auto">
+                <svg width="90" height="90" viewBox="0 0 64 64" aria-hidden="true" class="text-[var(--amber)]">
+                  <circle cx="28" cy="46" r="10" fill="currentColor"></circle>
+                  <rect x="34" y="12" width="6" height="28" fill="currentColor"></rect>
+                  <path d="M40 12 C 56 18, 28 30, 58 36" fill="none" stroke="currentColor" stroke-width="4" />
+                </svg>
+              </div>
+              <p class="text-center mt-6 text-slate-700 px-6">“All are welcome. Every voice matters.”</p>
+            </div>
+            <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
+              <li class="flex gap-2"><span class="text-[var(--amber)]">♪</span> 60‑minute sessions</li>
+              <li class="flex gap-2"><span class="text-[var(--amber)]">♪</span> Familiar decades music</li>
+              <li class="flex gap-2"><span class="text-[var(--amber)]">♪</span> Gentle breath work</li>
+              <li class="flex gap-2"><span class="text-[var(--amber)]">♪</span> Optional request box</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program -->
+  <section id="program" class="py-16 sm:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-1">
+          <h2 class="heading text-3xl font-extrabold text-[var(--navy)]">How it works</h2>
+          <p class="mt-3 text-slate-700">Turnkey for your team. We bring materials, run the hour, and leave the room happier than we found it.</p>
+        </div>
+        <div class="md:col-span-2 grid sm:grid-cols-2 gap-6">
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
+            <h3 class="heading font-bold text-lg">Weekly Flow</h3>
+            <ul class="mt-3 space-y-2 text-slate-700 list-disc list-inside">
+              <li>Warm‑ups & easy breath</li>
+              <li>Sing‑along of familiar tunes</li>
+              <li>Light part‑singing for eager voices</li>
+              <li>Community moments & smiles</li>
+            </ul>
+          </div>
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
+            <h3 class="heading font-bold text-lg">Accessibility</h3>
+            <ul class="mt-3 space-y-2 text-slate-700 list-disc list-inside">
+              <li>Seated‑friendly; comfortable keys</li>
+              <li>Large‑print lyric packets</li>
+              <li>Gentle volume; hydration breaks</li>
+              <li>Humming/lyric‑reading welcome</li>
+            </ul>
+          </div>
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
+            <h3 class="heading font-bold text-lg">Materials Included</h3>
+            <ul class="mt-3 space-y-2 text-slate-700 list-disc list-inside">
+              <li>Posters & elevator flyers</li>
+              <li>Lyric packets & request cards</li>
+              <li>Simple attendance & mood cards</li>
+              <li>Optional memory‑care set</li>
+            </ul>
+          </div>
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
+            <h3 class="heading font-bold text-lg">Optional Extras</h3>
+            <ul class="mt-3 space-y-2 text-slate-700 list-disc list-inside">
+              <li>Tea & Tunes Open Rehearsal (mini‑share)</li>
+              <li>Memory‑Care Melodies (same‑day add‑on)</li>
+              <li>Seasonal/Holiday sets</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section id="benefits" class="py-16 sm:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <h2 class="heading text-3xl font-extrabold text-[var(--navy)]">Well‑being benefits residents feel</h2>
+        <p class="mt-3 text-slate-700 max-w-2xl mx-auto">Group singing supports mood, memory cues, social connection, and gentle respiratory health—without the pressure of a formal performance.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl border border-slate-200 bg-[var(--cream)] shadow-soft">
+          <div class="text-3xl">😊</div>
+          <h3 class="heading font-bold mt-2">Mood lift</h3>
+          <p class="text-slate-700 mt-1 text-sm">Residents often leave lighter than they arrived.</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200 bg-[var(--cream)] shadow-soft">
+          <div class="text-3xl">🤝</div>
+          <h3 class="heading font-bold mt-2">Connection</h3>
+          <p class="text-slate-700 mt-1 text-sm">Low‑pressure, high‑belonging interactions.</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200 bg-[var(--cream)] shadow-soft">
+          <div class="text-3xl">🫁</div>
+          <h3 class="heading font-bold mt-2">Gentle breath</h3>
+          <p class="text-slate-700 mt-1 text-sm">Soft breath work and posture cues.</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200 bg-[var(--cream)] shadow-soft">
+          <div class="text-3xl">🧠</div>
+          <h3 class="heading font-bold mt-2">Memory cues</h3>
+          <p class="text-slate-700 mt-1 text-sm">Familiar songs evoke meaningful recall.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-16 sm:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <h2 class="heading text-3xl font-extrabold text-[var(--navy)]">Simple pricing</h2>
+        <p class="mt-3 text-slate-700">Turnkey 10‑week cycles with optional add‑ons. Multi‑site discounts available.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+          <h3 class="heading font-bold text-lg">Leisure Club</h3>
+          <p class="text-sm text-slate-600 mt-1">10×60‑min sessions</p>
+          <div class="mt-4 text-3xl font-extrabold text-[var(--navy)]">$1,800–$2,200</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc list-inside">
+            <li>All materials & posters</li>
+            <li>Large‑print lyric packets</li>
+            <li>Attendance & mood cards</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-block px-5 py-2 rounded-xl bg-[var(--amber)] text-white font-semibold hover:opacity-90 transition">Book a call</a>
+        </div>
+        <div class="rounded-2xl border-2 border-[var(--amber)] bg-white p-6 shadow-soft relative">
+          <div class="absolute -top-3 right-4 text-xs px-2 py-1 rounded-full bg-[var(--amber)] text-white">Popular</div>
+          <h3 class="heading font-bold text-lg">Leisure + Mini‑Share</h3>
+          <p class="text-sm text-slate-600 mt-1">Tea & Tunes Open Rehearsal</p>
+          <div class="mt-4 text-3xl font-extrabold text-[var(--navy)]">$1,950–$2,500</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc list-inside">
+            <li>Everything in Leisure Club</li>
+            <li>Posters & simple handouts</li>
+            <li>Gentle invite for families</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-block px-5 py-2 rounded-xl bg-[var(--amber)] text-white font-semibold hover:opacity-90 transition">Check dates</a>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+          <h3 class="heading font-bold text-lg">Same‑Day Add‑On</h3>
+          <p class="text-sm text-slate-600 mt-1">Memory‑Care Melodies (30–40 min)</p>
+          <div class="mt-4 text-3xl font-extrabold text-[var(--navy)]">+$150–$250</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc list-inside">
+            <li>Familiar, gentle repertoire</li>
+            <li>Seated‑friendly sing‑along</li>
+            <li>Comfortable keys & pacing</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-block px-5 py-2 rounded-xl bg-white border border-slate-300 hover:bg-slate-50 transition">Ask about same‑day</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <h2 class="heading text-3xl font-extrabold text-[var(--navy)]">What people say</h2>
+        <p class="mt-3 text-slate-700">Early pilot quotes you can replace with real ones later.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <figure class="p-6 rounded-2xl border border-slate-200 bg-[var(--cream)] shadow-soft">
+          <blockquote class="text-slate-800">“Residents who rarely join activities came—and stayed the whole hour.”</blockquote>
+          <figcaption class="mt-3 text-sm text-slate-600">— Life Enrichment Director</figcaption>
+        </figure>
+        <figure class="p-6 rounded-2xl border border-slate-200 bg-[var(--cream)] shadow-soft">
+          <blockquote class="text-slate-800">“It felt like home. I knew every song.”</blockquote>
+          <figcaption class="mt-3 text-sm text-slate-600">— Resident</figcaption>
+        </figure>
+        <figure class="p-6 rounded-2xl border border-slate-200 bg-[var(--cream)] shadow-soft">
+          <blockquote class="text-slate-800">“Melissa made everyone comfortable—no pressure, just joy.”</blockquote>
+          <figcaption class="mt-3 text-sm text-slate-600">— Family Member</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 sm:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <h2 class="heading text-3xl font-extrabold text-[var(--navy)]">FAQ</h2>
+        <p class="mt-3 text-slate-700">Short answers for Activities Directors & operators.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <details class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft group" open>
+          <summary class="heading font-bold cursor-pointer">Do residents need singing experience?</summary>
+          <p class="mt-3 text-slate-700">No. It’s designed for all ability levels. Humming and lyric‑reading are welcome too.</p>
+        </details>
+        <details class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft group">
+          <summary class="heading font-bold cursor-pointer">What room/equipment is needed?</summary>
+          <p class="mt-3 text-slate-700">Chairs in a semi‑circle and a quiet space. We bring lyric packets and optional speaker for light accompaniment.</p>
+        </details>
+        <details class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft group">
+          <summary class="heading font-bold cursor-pointer">Can we include assisted living or memory care?</summary>
+          <p class="mt-3 text-slate-700">Yes—there’s an optional same‑day Memory‑Care Melodies add‑on (30–40 min) tailored for comfort and recall.</p>
+        </details>
+        <details class="p-6 rounded-2xl border border-slate-200 bg-white shadow-soft group">
+          <summary class="heading font-bold cursor-pointer">Do you carry insurance?</summary>
+          <p class="mt-3 text-slate-700">Yes. We can name your community as an additional insured on our general liability policy.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 sm:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-8">
+        <h2 class="heading text-3xl font-extrabold text-[var(--navy)]">Check availability</h2>
+        <p class="mt-3 text-slate-700">Tell us a little about your community. We’ll follow up within 1 business day.</p>
+      </div>
+      <form class="grid gap-4 rounded-2xl border border-slate-200 p-6 bg-[var(--cream)] shadow-soft" onsubmit="return handleSubmit(event)">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label for="name" class="block text-sm font-medium text-slate-700">Your name</label>
+            <input id="name" name="name" type="text" required class="mt-1 block w-full rounded-lg border-slate-300 focus:ring-[var(--amber)] focus:border-[var(--amber)]" placeholder="Jordan Lee">
+          </div>
+          <div>
+            <label for="role" class="block text-sm font-medium text-slate-700">Role</label>
+            <input id="role" name="role" type="text" class="mt-1 block w-full rounded-lg border-slate-300 focus:ring-[var(--amber)] focus:border-[var(--amber)]" placeholder="Life Enrichment Director">
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label for="email" class="block text-sm font-medium text-slate-700">Email</label>
+            <input id="email" name="email" type="email" required class="mt-1 block w-full rounded-lg border-slate-300 focus:ring-[var(--amber)] focus:border-[var(--amber)]" placeholder="you@community.com">
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-medium text-slate-700">Phone</label>
+            <input id="phone" name="phone" type="tel" class="mt-1 block w-full rounded-lg border-slate-300 focus:ring-[var(--amber)] focus:border-[var(--amber)]" placeholder="(555) 555‑5555">
+          </div>
+        </div>
+        <div>
+          <label for="community" class="block text-sm font-medium text-slate-700">Community name</label>
+          <input id="community" name="community" type="text" class="mt-1 block w-full rounded-lg border-slate-300 focus:ring-[var(--amber)] focus:border-[var(--amber)]" placeholder="Sunrise Apartments — Independent Living">
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-slate-700">Anything else?</label>
+          <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-lg border-slate-300 focus:ring-[var(--amber)] focus:border-[var(--amber)]" placeholder="Preferred day/time, start month, accessibility notes…"></textarea>
+        </div>
+        <div class="flex items-center gap-3">
+          <input id="mc" type="checkbox" class="rounded border-slate-300 text-[var(--amber)] focus:ring-[var(--amber)]">
+          <label for="mc" class="text-sm text-slate-700">Also interested in Memory‑Care Melodies</label>
+        </div>
+        <div class="flex items-center gap-3">
+          <button type="submit" class="px-6 py-3 rounded-xl bg-[var(--amber)] text-white font-semibold hover:opacity-90 transition">Send inquiry</button>
+          <span id="formStatus" class="text-sm text-slate-600" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-slate-200 bg-[var(--cream)]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-sm text-slate-600 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span>© <span id="year"></span> Music with Melissa</span>
+        <span class="hidden sm:inline">•</span>
+        <a href="#contact" class="underline hover:no-underline">Contact</a>
+      </div>
+      <div class="opacity-75">The Resident Sing‑Along Club</div>
+    </div>
+  </footer>
+
+  <script>
+    // Basic in-page form handler (no backend)
+    function handleSubmit(e){
+      e.preventDefault();
+      const status = document.getElementById('formStatus');
+      status.textContent = 'Thanks! We received your inquiry and will follow up shortly.';
+      e.target.reset();
+      return false;
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
