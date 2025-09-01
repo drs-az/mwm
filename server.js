@@ -20,6 +20,31 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+// In-memory messages for demonstration purposes
+const messages = [
+  { id: 1, text: 'Welcome to Music with Melissa!' },
+  { id: 2, text: 'This is your second message.' },
+];
+
+// READMSG command: return a message by id
+app.get('/api/messages/:id', (req, res) => {
+  const id = parseInt(req.params.id, 10);
+  const msg = messages.find((m) => m.id === id);
+  if (msg) {
+    res.json(msg);
+  } else {
+    res.status(404).json({ error: 'Message not found' });
+  }
+});
+
+// REPLYMSG command: handle replies to a message
+app.post('/api/messages/:id/reply', (req, res) => {
+  const id = parseInt(req.params.id, 10);
+  const { reply } = req.body;
+  console.log(`Reply to message ${id}: ${reply}`);
+  res.json({ success: true });
+});
+
 app.post('/api/contact', async (req, res) => {
   const { name, email, role, phone, community, message, mc } = req.body;
 
