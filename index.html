@@ -31,6 +31,14 @@
   </style>
 </head>
 <body class="body text-slate-800 bg-[var(--cream)]">
+  <!-- Promo Modal -->
+  <div id="promoModal" class="fixed inset-0 bg-black/60 flex items-center justify-center p-4 z-[100]">
+    <div class="bg-white rounded-2xl max-w-md w-full text-center p-6">
+      <img src="modalad.png" alt="Leisure + Mini‑Share package" class="w-full h-auto rounded-lg" />
+      <p class="mt-4 text-slate-700">Schedule to book a <strong>Leisure + Mini‑Share</strong> package.</p>
+      <a id="learnMoreBtn" href="#contact" class="mt-6 inline-block px-4 py-2 rounded-xl bg-[var(--amber)] text-white font-semibold hover:opacity-90 transition">Learn More</a>
+    </div>
+  </div>
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-[var(--cream)]/85 backdrop-blur border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
@@ -362,6 +370,15 @@
       return false;
     }
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dismiss promo modal
+    const promoModal = document.getElementById('promoModal');
+    const learnMoreBtn = document.getElementById('learnMoreBtn');
+    if (promoModal && learnMoreBtn) {
+      learnMoreBtn.addEventListener('click', () => {
+        promoModal.classList.add('hidden');
+      });
+    }
   </script>
 </body>
 </html>
